@@ -1,0 +1,151 @@
+@hostname = localhost
+@port = 5000
+@host = {{hostname}}:{{port}}
+@api = api
+@contentType = application/json
+@createdAt = {{$datetime iso8601}}
+@updatedAt = {{$datetime iso8601}}
+
+###
+GET http://{{host}}/{{api}}/inspectionMatter HTTP/1.1
+
+###
+
+POST http://{{host}}/{{api}}/user HTTP/1.1
+Content-Type: application/json
+
+# {
+#     "username": "wnsnyzfdd",
+#     "password": "wnsnyzfdd123456",
+#     "name": "万宁市农业执法大队",
+#     "supervisionAdministrations": ["万宁市农业执法大队"],
+#     "access": "admin",
+#     "_createTime": "{{createdAt}}",
+#     "_updateTime": "{{updatedAt}}"
+# }
+
+{
+    "username": "wnszjj",
+    "password": "wnszjj123456",
+    "name": "万宁市住建局",
+    "supervisionAdministrations": ["万宁市住建局"],
+    "access": "admin",
+    "_createTime": "{{createdAt}}",
+    "_updateTime": "{{updatedAt}}"
+}
+
+###
+
+POST http://{{host}}/{{api}}/doubleRandomInspection HTTP/1.1
+Content-Type: application/json
+
+{
+    "inspectionMatter": "should not be empty",
+    "dutyDepartment":  "农业执法大队",
+    "industryType": "农业执法",
+    "inspectedAt": "should not be empty",
+    "inspectedRate": 50,
+    "personCount": 3,
+    "groupCount": 6,
+    "supervisionAdministration": "万宁市综合行政执法局农业执法大队",
+    "createdAt": "should not be empty"
+}
+
+###
+
+POST http://{{host}}/{{api}}/doubleRandomResult HTTP/1.1
+Content-Type: application/json
+
+{
+    "_id": "112557505f9a7577002e228b7f3c9fe0",
+    "status": 0,
+    "desc": "无异常记录"
+}
+
+###
+
+POST http://{{host}}/{{api}}/supervisionAdministration HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "万宁市农业执法大队",
+    "contactPerson": "",
+    "contactPhone": "",
+    "username": "wnsnyzfdd",
+    "password": "wnsnyzfdd123456",
+    "industryType": [{
+        "key": 0,
+        "name": "农业执法",
+        "count": 0,
+        "dutyDepartment": "万宁市农业执法大队",
+        "desc": ""}],
+    "dutyDepartment": [{
+        "key": 0,
+        "name": "万宁市农业执法大队",
+        "contactPerson": "",
+        "contactPhone": "",
+        "desc": ""
+    }],
+    "desc": ""
+}
+
+###
+
+POST http://{{host}}/{{api}}/marketParticipant HTTP/1.1
+Content-Type: application/json
+
+{
+    "supervisionAdministration": "万宁市农业执法大队",
+    "industryType": "农业执法",
+    "dutyDepartment": "万宁市农业执法大队"
+}
+
+###
+
+POST http://{{host}}/{{api}}/lawEnforcementOfficial HTTP/1.1
+Content-Type: application/json
+
+{
+    "supervisionAdministration": "万宁市农业执法大队",
+    "dutyDepartment": "万宁市农业执法大队"
+}
+
+###
+
+POST http://{{host}}/{{api}}/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "wnsnyzfdd",
+    "password": "123456"
+}
+
+###
+
+POST https://wanning-open-0gbztc9h2bcb19f0-1300942068.ap-shanghai.service.tcloudbase.com/wanning-backend/api/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "wnsnyzfdd",
+    "password": "123456"
+}
+
+###
+
+POST http://{{host}}/{{api}}/inspectionMatter HTTP/1.1
+Content-Type: application/json
+
+{
+    "supervisionAdministration": "万宁市农业执法大队",
+    "dutyDepartment": "万宁市农业执法大队"
+}
+
+###
+
+GET http://{{host}}/{{api}}/doubleRandomResult?id=c4747cd45f95e3be001e40306eba5d96 HTTP/1.1
+
+###
+
+POST http://{{host}}/{{api}}/doubleRandomInspection/export HTTP/1.1
+
+

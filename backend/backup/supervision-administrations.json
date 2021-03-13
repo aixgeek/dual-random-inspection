@@ -1,0 +1,677 @@
+{
+    "name": "万宁市农业执法大队",
+    "contactPerson": "",
+    "contactPhone": "",
+    "username": "万宁市农业执法大队",
+    "password": "123456",
+    "industryType": [
+        {
+            "key": 0,
+            "name": "农业执法",
+            "count": 0,
+            "dutyDepartment": "万宁市农业执法大队",
+            "desc": ""
+        }
+    ],
+    "dutyDepartment": [
+        {
+            "key": 0,
+            "name": "万宁市农业执法大队",
+            "contactPerson": "",
+            "contactPhone": "",
+            "desc": ""
+        }
+    ],
+    "desc": ""
+}
+{
+    "name": "万宁市生态环境行政执法大队",
+    "contactPerson": "",
+    "contactPhone": "",
+    "username": "万宁市生态环境行政执法大队",
+    "password": "123456",
+    "industryType": [
+        {
+            "key": 0,
+            "name": "农业执法",
+            "count": 0,
+            "dutyDepartment": "万宁市生态环境行政执法大队",
+            "desc": ""
+        }
+    ],
+    "dutyDepartment": [
+        {
+            "key": 0,
+            "name": "万宁市生态环境行政执法大队",
+            "contactPerson": "",
+            "contactPhone": "",
+            "desc": ""
+        }
+    ],
+    "desc": ""
+}
+{
+    "name": "万宁市住建局",
+    "contactPerson": "",
+    "contactPhone": "",
+    "username": "万宁市住建局",
+    "password": "123456",
+    "industryType": [
+        {
+            "key": 0,
+            "name": "物业企业",
+            "count": 0,
+            "dutyDepartment": "万宁市住建局",
+            "desc": ""
+        },
+        {
+            "key": 1,
+            "name": "房地产企业",
+            "count": 0,
+            "dutyDepartment": "万宁市住建局",
+            "desc": ""
+        },
+        {
+            "key": 2,
+            "name": "中介企业",
+            "count": 0,
+            "dutyDepartment": "万宁市住建局",
+            "desc": ""
+        }
+    ],
+    "dutyDepartment": [
+        {
+            "key": 0,
+            "name": "万宁市住建局",
+            "contactPerson": "",
+            "contactPhone": "",
+            "desc": ""
+        }
+    ],
+    "desc": ""
+}
+{
+    "name": "万宁市卫生健康委员会",
+    "contactPerson": "",
+    "contactPhone": "",
+    "username": "万宁市卫生健康委员会",
+    "password": "123456",
+    "industryType": [
+        {
+            "key": 0,
+            "name": "采供血机构",
+            "count": 0,
+            "dutyDepartment": "万宁市卫生健康委员会",
+            "desc": ""
+        },
+        {
+            "key": 1,
+            "name": "放射卫生",
+            "count": 0,
+            "dutyDepartment": "万宁市卫生健康委员会",
+            "desc": ""
+        },
+        {
+            "key": 2,
+            "name": "公共卫生",
+            "count": 0,
+            "dutyDepartment": "万宁市卫生健康委员会",
+            "desc": ""
+        },
+        {
+            "key": 3,
+            "name": "计划生育",
+            "count": 0,
+            "dutyDepartment": "万宁市卫生健康委员会",
+            "desc": ""
+        },
+        {
+            "key": 4,
+            "name": "饮用水卫生",
+            "count": 0,
+            "dutyDepartment": "万宁市卫生健康委员会",
+            "desc": ""
+        },
+        {
+            "key": 5,
+            "name": "消毒产品卫生",
+            "count": 0,
+            "dutyDepartment": "万宁市卫生健康委员会",
+            "desc": ""
+        },
+        {
+            "key": 6,
+            "name": "学校卫生",
+            "count": 0,
+            "dutyDepartment": "万宁市卫生健康委员会",
+            "desc": ""
+        },
+        {
+            "key": 7,
+            "name": "医疗卫生",
+            "count": 0,
+            "dutyDepartment": "万宁市卫生健康委员会",
+            "desc": ""
+        },
+        {
+            "key": 8,
+            "name": "职业卫生",
+            "count": 0,
+            "dutyDepartment": "万宁市卫生健康委员会",
+            "desc": ""
+        },
+        {
+            "key": 9,
+            "name": "传染病卫生",
+            "count": 0,
+            "dutyDepartment": "万宁市卫生健康委员会",
+            "desc": ""
+        }
+    ],
+    "dutyDepartment": [
+        {
+            "key": 0,
+            "name": "法规组监督一队",
+            "contactPerson": "",
+            "contactPhone": "",
+            "desc": ""
+        },
+        {
+            "key": 1,
+            "name": "法规组监督二队",
+            "contactPerson": "",
+            "contactPhone": "",
+            "desc": ""
+        }
+    ],
+    "desc": ""
+}
+{
+    "name": "万宁市交通运输执法大队",
+    "contactPerson": "",
+    "contactPhone": "",
+    "username": "万宁市交通运输执法大队",
+    "password": "123456",
+    "industryType": [
+        {
+            "key": 0,
+            "name": "交通运输",
+            "count": 0,
+            "dutyDepartment": "万宁市交通运输执法大队",
+            "desc": ""
+        }
+    ],
+    "dutyDepartment": [
+        {
+            "key": 0,
+            "name": "万宁市交通运输执法大队",
+            "contactPerson": "",
+            "contactPhone": "",
+            "desc": ""
+        }
+    ],
+    "desc": ""
+}
+{
+    "name": "万宁市教育局",
+    "contactPerson": "",
+    "contactPhone": "",
+    "username": "万宁市教育局",
+    "password": "123456",
+    "industryType": [
+        {
+            "key": 0,
+            "name": "民办学校",
+            "count": 0,
+            "dutyDepartment": "万宁市教育局",
+            "desc": ""
+        },
+        {
+            "key": 1,
+            "name": "幼儿园",
+            "count": 0,
+            "dutyDepartment": "万宁市教育局",
+            "desc": ""
+        },
+        {
+            "key": 2,
+            "name": "中小学",
+            "count": 0,
+            "dutyDepartment": "万宁市教育局",
+            "desc": ""
+        }
+    ],
+    "dutyDepartment": [
+        {
+            "key": 0,
+            "name": "万宁市教育局",
+            "contactPerson": "",
+            "contactPhone": "",
+            "desc": ""
+        }
+    ],
+    "desc": ""
+}
+{
+    "name": "万宁市跨领域综合行政执法大队",
+    "contactPerson": "",
+    "contactPhone": "",
+    "username": "万宁市跨领域综合行政执法大队",
+    "password": "123456",
+    "industryType": [
+        {
+            "key": 0,
+            "name": "跨领域",
+            "count": 0,
+            "dutyDepartment": "万宁市跨领域综合行政执法大队",
+            "desc": ""
+        }
+    ],
+    "dutyDepartment": [
+        {
+            "key": 0,
+            "name": "万宁市跨领域综合行政执法大队",
+            "contactPerson": "",
+            "contactPhone": "",
+            "desc": ""
+        }
+    ],
+    "desc": ""
+}
+{
+    "name": "万宁市劳动保障和安全生产执法大队",
+    "contactPerson": "",
+    "contactPhone": "",
+    "username": "万宁市劳动保障和安全生产执法大队",
+    "password": "123456",
+    "industryType": [
+        {
+            "key": 0,
+            "name": "劳动保障和安全生产",
+            "count": 0,
+            "dutyDepartment": "万宁市劳动保障和安全生产执法大队",
+            "desc": ""
+        }
+    ],
+    "dutyDepartment": [
+        {
+            "key": 0,
+            "name": "万宁市劳动保障和安全生产执法大队",
+            "contactPerson": "",
+            "contactPhone": "",
+            "desc": ""
+        }
+    ],
+    "desc": ""
+}
+{
+    "name": "万宁市旅游和文化广电体育局",
+    "contactPerson": "",
+    "contactPhone": "",
+    "username": "万宁市旅游和文化广电体育局",
+    "password": "123456",
+    "industryType": [
+        {
+            "key": 0,
+            "name": "娱乐场所经营单位",
+            "count": 0,
+            "dutyDepartment": "万宁市旅游和文化广电体育局（文化）",
+            "desc": ""
+        },
+        {
+            "key": 1,
+            "name": "互联网上网服务营业场所",
+            "count": 0,
+            "dutyDepartment": "万宁市旅游和文化广电体育局（文化）",
+            "desc": ""
+        },
+        {
+            "key": 2,
+            "name": "营业性演出表演团体",
+            "count": 0,
+            "dutyDepartment": "万宁市旅游和文化广电体育局（文化）",
+            "desc": ""
+        },
+        {
+            "key": 3,
+            "name": "高危险性体育项目经营单位",
+            "count": 0,
+            "dutyDepartment": "万宁市旅游和文化广电体育局（文化）",
+            "desc": ""
+        },
+        {
+            "key": 4,
+            "name": "旅行社",
+            "count": 0,
+            "dutyDepartment": "万宁市旅游和文化广电体育局（旅游）",
+            "desc": ""
+        },
+        {
+            "key": 5,
+            "name": "旅馆",
+            "count": 0,
+            "dutyDepartment": "万宁市旅游和文化广电体育局（旅游）",
+            "desc": ""
+        },
+        {
+            "key": 6,
+            "name": "旅游景区",
+            "count": 0,
+            "dutyDepartment": "万宁市旅游和文化广电体育局（旅游）",
+            "desc": ""
+        }
+    ],
+    "dutyDepartment": [
+        {
+            "key": 0,
+            "name": "万宁市旅游和文化广电体育局（文化）",
+            "contactPerson": "",
+            "contactPhone": "",
+            "desc": ""
+        },
+        {
+            "key": 1,
+            "name": "万宁市旅游和文化广电体育局（旅游）",
+            "contactPerson": "",
+            "contactPhone": "",
+            "desc": ""
+        }
+    ],
+    "desc": ""
+}
+{
+    "name": "万宁市旅游文化市场行政执法大队",
+    "contactPerson": "",
+    "contactPhone": "",
+    "username": "万宁市旅游文化市场行政执法大队",
+    "password": "123456",
+    "industryType": [
+        {
+            "key": 0,
+            "name": "娱乐场所",
+            "count": 0,
+            "dutyDepartment": "万宁市旅游文化市场行政执法大队",
+            "desc": ""
+        },
+        {
+            "key": 1,
+            "name": "互联网上网服务场所",
+            "count": 0,
+            "dutyDepartment": "万宁市旅游文化市场行政执法大队",
+            "desc": ""
+        },
+        {
+            "key": 2,
+            "name": "印刷厂",
+            "count": 0,
+            "dutyDepartment": "万宁市旅游文化市场行政执法大队",
+            "desc": ""
+        },
+        {
+            "key": 3,
+            "name": "剧场",
+            "count": 0,
+            "dutyDepartment": "万宁市旅游文化市场行政执法大队",
+            "desc": ""
+        },
+        {
+            "key": 4,
+            "name": "高危体育项目",
+            "count": 0,
+            "dutyDepartment": "万宁市旅游文化市场行政执法大队",
+            "desc": ""
+        },
+        {
+            "key": 5,
+            "name": "出版物经营单位",
+            "count": 0,
+            "dutyDepartment": "万宁市旅游文化市场行政执法大队",
+            "desc": ""
+        },
+        {
+            "key": 6,
+            "name": "景区",
+            "count": 0,
+            "dutyDepartment": "万宁市旅游文化市场行政执法大队",
+            "desc": ""
+        },
+        {
+            "key": 7,
+            "name": "旅馆",
+            "count": 0,
+            "dutyDepartment": "万宁市旅游文化市场行政执法大队",
+            "desc": ""
+        },
+        {
+            "key": 8,
+            "name": "旅行社",
+            "count": 0,
+            "dutyDepartment": "万宁市旅游文化市场行政执法大队",
+            "desc": ""
+        },
+        {
+            "key": 9,
+            "name": "营业网点",
+            "count": 0,
+            "dutyDepartment": "万宁市旅游文化市场行政执法大队",
+            "desc": ""
+        }
+    ],
+    "dutyDepartment": [
+        {
+            "key": 0,
+            "name": "万宁市旅游文化市场行政执法大队",
+            "contactPerson": "",
+            "contactPhone": "",
+            "desc": ""
+        }
+    ],
+    "desc": ""
+}
+{
+    "name": "万宁市农业农村局",
+    "contactPerson": "",
+    "contactPhone": "",
+    "username": "万宁市农业农村局",
+    "password": "123456",
+    "industryType": [
+        {
+            "key": 0,
+            "name": "农业农村",
+            "count": 0,
+            "dutyDepartment": "万宁市农业农村局",
+            "desc": ""
+        }
+    ],
+    "dutyDepartment": [
+        {
+            "key": 0,
+            "name": "万宁市农业农村局",
+            "contactPerson": "",
+            "contactPhone": "",
+            "desc": ""
+        }
+    ],
+    "desc": ""
+}
+{
+    "name": "万宁市应急管理局",
+    "contactPerson": "",
+    "contactPhone": "",
+    "username": "万宁市应急管理局",
+    "password": "123456",
+    "industryType": [
+        {
+            "key": 0,
+            "name": "危险化学品生产、经营企业",
+            "count": 0,
+            "dutyDepartment": "万宁市应急管理局",
+            "desc": ""
+        },
+        {
+            "key": 1,
+            "name": "非煤矿山企业",
+            "count": 0,
+            "dutyDepartment": "万宁市应急管理局",
+            "desc": ""
+        },
+        {
+            "key": 2,
+            "name": "烟花爆竹生产、经营企业",
+            "count": 0,
+            "dutyDepartment": "万宁市应急管理局",
+            "desc": ""
+        }
+    ],
+    "dutyDepartment": [
+        {
+            "key": 0,
+            "name": "万宁市应急管理局",
+            "contactPerson": "",
+            "contactPhone": "",
+            "desc": ""
+        }
+    ],
+    "desc": ""
+}
+{
+    "name": "万宁市水务局",
+    "contactPerson": "",
+    "contactPhone": "",
+    "username": "万宁市水务局",
+    "password": "123456",
+    "industryType": [
+        {
+            "key": 0,
+            "name": "水库大坝",
+            "count": 0,
+            "dutyDepartment": "万宁市水务局",
+            "desc": ""
+        },
+        {
+            "key": 1,
+            "name": "水务项目",
+            "count": 0,
+            "dutyDepartment": "万宁市水务局",
+            "desc": ""
+        },
+        {
+            "key": 2,
+            "name": "生产建设单位",
+            "count": 0,
+            "dutyDepartment": "万宁市水务局",
+            "desc": ""
+        },
+        {
+            "key": 3,
+            "name": "取水单位",
+            "count": 0,
+            "dutyDepartment": "万宁市水务局",
+            "desc": ""
+        },
+        {
+            "key": 4,
+            "name": "涉及农民工工资项目",
+            "count": 0,
+            "dutyDepartment": "万宁市水务局",
+            "desc": ""
+        }
+    ],
+    "dutyDepartment": [
+        {
+            "key": 0,
+            "name": "万宁市水务局",
+            "contactPerson": "",
+            "contactPhone": "",
+            "desc": ""
+        }
+    ],
+    "desc": ""
+}
+{
+    "name": "万宁市商务局",
+    "contactPerson": "",
+    "contactPhone": "",
+    "username": "万宁市商务局",
+    "password": "123456",
+    "industryType": [
+        {
+            "key": 0,
+            "name": "农贸市场",
+            "count": 0,
+            "dutyDepartment": "万宁市商务局",
+            "desc": ""
+        },
+        {
+            "key": 1,
+            "name": "成品油零售企业",
+            "count": 0,
+            "dutyDepartment": "万宁市商务局",
+            "desc": ""
+        },
+        {
+            "key": 2,
+            "name": "汽车销售网点",
+            "count": 0,
+            "dutyDepartment": "万宁市商务局",
+            "desc": ""
+        },
+        {
+            "key": 3,
+            "name": "再生资源企业",
+            "count": 0,
+            "dutyDepartment": "万宁市商务局",
+            "desc": ""
+        }
+    ],
+    "dutyDepartment": [
+        {
+            "key": 0,
+            "name": "万宁市商务局",
+            "contactPerson": "",
+            "contactPhone": "",
+            "desc": ""
+        }
+    ],
+    "desc": ""
+}
+{
+    "name": "万宁市司法局",
+    "contactPerson": "",
+    "contactPhone": "",
+    "username": "万宁市司法局",
+    "password": "123456",
+    "industryType": [
+        {
+            "key": 0,
+            "name": "律师事务所",
+            "count": 0,
+            "dutyDepartment": "万宁市司法局",
+            "desc": ""
+        },
+        {
+            "key": 1,
+            "name": "公证处",
+            "count": 0,
+            "dutyDepartment": "万宁市司法局",
+            "desc": ""
+        },
+        {
+            "key": 2,
+            "name": "基层法律事务所",
+            "count": 0,
+            "dutyDepartment": "万宁市司法局",
+            "desc": ""
+        }
+    ],
+    "dutyDepartment": [
+        {
+            "key": 0,
+            "name": "万宁市司法局",
+            "contactPerson": "",
+            "contactPhone": "",
+            "desc": ""
+        }
+    ],
+    "desc": ""
+}

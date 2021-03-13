@@ -1,0 +1,66 @@
+{
+    "version": "2.0",
+    "envId": "{{env.TCB_ENVID}}",
+    "$schema": "https://framework-1258016615.tcloudbaseapp.com/schema/latest.json",
+    "framework": {
+        "plugins": {
+            "service": {
+                "use": "@cloudbase/framework-plugin-node",
+                "inputs": {
+                    "name": "wanning-backend",
+                    "entry": "app.js",
+                    "projectPath": "./",
+                    "path": "/wanning-backend",
+                    "functionOptions": {
+                        "timeout": 15,
+                        "envVariables": {
+                            "NODE_ENV": "production"
+                        }
+                    }
+                }
+            },
+            "db": {
+                "use": "@cloudbase/framework-plugin-database",
+                "inputs": {
+                    "collections": [
+                        {
+                            "collectionName": "inspection-matters",
+                            "description": "随机抽查事项清单",
+                            "aclTag": "ADMINONLY"
+                        },
+                        {
+                            "collectionName": "law-enforcement-officials",
+                            "description": "执法人员库",
+                            "aclTag": "ADMINONLY"
+                        },
+                        {
+                            "collectionName": "market-participants",
+                            "description": "市场主体库",
+                            "aclTag": "ADMINONLY"
+                        },
+                        {
+                            "collectionName": "supervision-administrations",
+                            "description": "监管单位",
+                            "aclTag": "ADMINONLY"
+                        },
+                        {
+                            "collectionName": "double-random-inspections",
+                            "description": "双随机业务记录",
+                            "aclTag": "ADMINONLY"
+                        },
+                        {
+                            "collectionName": "double-random-results",
+                            "description": "双随机结果记录",
+                            "aclTag": "ADMINONLY"
+                        },
+                        {
+                            "collectionName": "users",
+                            "description": "系统用户（请不要手动修改）",
+                            "aclTag": "ADMINONLY"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
