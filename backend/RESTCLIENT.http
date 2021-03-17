@@ -7,7 +7,7 @@
 @updatedAt = {{$datetime iso8601}}
 
 ###
-GET http://{{host}}/{{api}}/inspectionMatter HTTP/1.1
+GET http://{{host}}/{{api}}/dutyDepartment/all HTTP/1.1
 
 ###
 

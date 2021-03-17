@@ -108,6 +108,11 @@ export default defineConfig({
           hideChildrenInMenu: true,
         },
         {
+          path: '/double-random/cooperation',
+          name: 'cooperation',
+          hideChildrenInMenu: true,
+        },
+        {
           path: '/double-random/history',
           name: 'history',
           hideChildrenInMenu: true,

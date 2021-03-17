@@ -19,7 +19,7 @@ export class DutyDepartmentController {
     ) { }
 
     @Get()
-    async getIndustryTypes(
+    async getDutyDepartments(
         @Request() req: AuthRequest) {
 
         // 可获取的所有监管单位列表
@@ -30,7 +30,7 @@ export class DutyDepartmentController {
             filter.name = $.in(allSupervisionAdministrations)
         }
 
-        let { data, requestId } = await this.cloudbaseService
+        const { data, requestId } = await this.cloudbaseService
             .collection(CollectionV2.SupervisionAdministrations)
             .where(filter)
             .get()
@@ -45,4 +45,24 @@ export class DutyDepartmentController {
             success: true,
         }
     }
+
+    @Get('/all')
+    async getAllDutyDepartments(
+        @Request() req: AuthRequest) {
+
+        const filter: any = {}
+
+        const { data, requestId } = await this.cloudbaseService
+            .collection(CollectionV2.SupervisionAdministrations)
+            .where(filter)
+            .get()
+
+        return {
+            requestId,
+            data,
+            success: true,
+        }
+    }
+
+
 }
