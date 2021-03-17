@@ -12,6 +12,7 @@ import XLSX from 'xlsx';
 import { RecordNotExistException } from '@/common'
 import { CloudBaseService } from '@/services'
 import { CollectionV2 } from '@/constants'
+import fs from 'fs';
 
 class DoubleRandomInspection {
     _id: string
@@ -180,7 +181,7 @@ export class DoubleRandomInspectionController {
             filter.supervisionAdministration = $.in(allSupervisionAdministrations)
         }
 
-        let { data, requestId } = await this.cloudbaseService
+        const { data, requestId } = await this.cloudbaseService
             .collection(CollectionV2.DoubleRandomInspections)
             .where(filter)
             .skip(Number(current - 1) * Number(pageSize))
@@ -193,7 +194,7 @@ export class DoubleRandomInspectionController {
             d.industryType = d.industryType.toString()
         })
 
-        let { total } = await this.cloudbaseService
+        const { total } = await this.cloudbaseService
             .collection(CollectionV2.DoubleRandomInspections)
             .where(filter)
             .count()
@@ -225,25 +226,40 @@ export class DoubleRandomInspectionController {
             filter.doubleRandomInspection = $.in(ids)
         }
 
-        let { data, requestId } = await this.cloudbaseService
+        const { data, requestId } = await this.cloudbaseService
             .collection(CollectionV2.DoubleRandomResults)
             .where(filter)
+            .field({
+                doubleRandomInspection: false,
+                _id: false
+            })
             .limit(limit)
             .get()
 
         // 数组转字符串
         data.map(d => {
-            d.inspectionMatter = d.inspectionMatter.toString()
+            d.inspectionMatter = d.inspectionMatter.toString();
+            d.inspectedAt = new Date(d.inspectedAt).toLocaleDateString();
+            d.createdAt = new Date(d.createdAt).toLocaleDateString();
+            if (d.status == '0') { d.status = '未检查' }
+            else if (d.status == '1') { d.status = '责令整改' }
+            else if (d.status == '3') { d.status = '异常' }
+            else { d.status = '正常' }
         })
 
-        let worksheet = XLSX.utils.json_to_sheet(data);
-        let workbook = XLSX.utils.book_new();
+        const worksheet = XLSX.utils.json_to_sheet(data);
+        const workbook = XLSX.utils.book_new();
         XLSX.utils.book_append_sheet(workbook, worksheet, "SheetJS");
-        XLSX.writeFile(workbook, './filename.xlsx', { bookType: 'xlsx' })
+        const tempId = new Date().getTime()
+        await XLSX.writeFile(workbook, `/tmp/${tempId}.xlsx`, { bookType: 'xlsx' })
+        const result = await this.cloudbaseService.app.uploadFile({
+            cloudPath: `${tempId}.xlsx`,
+            fileContent: fs.createReadStream(`/tmp/${tempId}.xlsx`)
+        })
 
         return {
             requestId,
-            data,
+            data: result,
             success: true,
         }
     }

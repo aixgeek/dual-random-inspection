@@ -10,9 +10,12 @@
                     "outputPath": "./dist",
                     "installCommand": "echo \"Skip Install\"",
                     "buildCommand": "echo \"Skip Build\"",
-                    "cloudPath": "{{env.deployPath}}"
+                    "cloudPath": "/"
                 }
             }
-        }
-    }
+        },
+        "name": "frontend"
+    },
+    "functionRoot": "./functions",
+    "functions": []
 }

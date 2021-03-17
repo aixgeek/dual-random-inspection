@@ -6,18 +6,21 @@ import ProTable, { ProColumns, ActionType } from '@ant-design/pro-table';
 import ProDescriptions from '@ant-design/pro-descriptions';
 import { ListItem } from './data';
 import { queryList, exportList } from './service';
+import { downloadFile } from '@/utils'
 
 /**
  *  导出节点
  * @param selectedRows
  */
 const handleExport = async (selectedRows: ListItem[]) => {
+
   const hide = message.loading('正在导出');
   if (!selectedRows) return true;
   try {
-    await exportList({
+    const { data } = await exportList({
       ids: selectedRows.map((row) => row._id),
     });
+    await downloadFile(data.fileID)
     hide();
     message.success('导出成功');
     return true;
