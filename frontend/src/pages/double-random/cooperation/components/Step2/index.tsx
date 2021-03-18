@@ -80,14 +80,14 @@ const Step2: React.FC<StepProps> = (props) => {
     if (dispatch) {
       const values = getFieldsValue();
       dispatch({
-        type: 'double_random_start/saveStepFormData',
+        type: 'double_random_cooperation/saveStepFormData',
         payload: {
           ...stepForm,
           ...values,
         },
       });
       dispatch({
-        type: 'double_random_start/saveCurrentStep',
+        type: 'double_random_cooperation/saveCurrentStep',
         payload: 0,
       });
     }
@@ -97,11 +97,11 @@ const Step2: React.FC<StepProps> = (props) => {
     const values = await validateFields();
     if (dispatch) {
       dispatch({
-        type: 'double_random_start/saveStepFormData',
+        type: 'double_random_cooperation/saveStepFormData',
         payload: values,
       });
       dispatch({
-        type: 'double_random_start/saveCurrentStep',
+        type: 'double_random_cooperation/saveCurrentStep',
         payload: 2,
       });
     }
@@ -120,10 +120,10 @@ const Step2: React.FC<StepProps> = (props) => {
   useEffect(() => {
     if (dispatch) {
       dispatch({
-        type: 'double_random_start/fetchSupervisionAdministrations',
+        type: 'double_random_cooperation/fetchSupervisionAdministrations',
       });
       dispatch({
-        type: 'double_random_start/fetchIndustryTypes',
+        type: 'double_random_cooperation/fetchIndustryTypes',
       });
     }
   }, []);
@@ -137,26 +137,6 @@ const Step2: React.FC<StepProps> = (props) => {
         className={styles.stepForm}
         initialValues={stepForm}
       >
-        <Form.Item
-          label="监管单位"
-          name="supervisionAdministration"
-          rules={[{ required: true, message: '请选择监管单位' }]}
-        >
-          <Select
-            allowClear
-            style={{ width: '100%' }}
-            placeholder="请选择监管单位"
-            dropdownStyle={{ zIndex: 9999 }}
-          >
-            {supervisionAdministrations?.map((result: { name: string }) => {
-              return (
-                <Select.Option key={result.name} value={result.name}>
-                  {result.name}
-                </Select.Option>
-              );
-            })}
-          </Select>
-        </Form.Item>
         <Form.Item
           label="行业类型"
           name="industryType"
@@ -240,8 +220,8 @@ const Step2: React.FC<StepProps> = (props) => {
   );
 };
 
-export default connect(({ double_random_start }: { double_random_start: StateType }) => ({
-  industryTypes: double_random_start.industryTypes,
-  supervisionAdministrations: double_random_start.supervisionAdministrations,
-  stepForm: double_random_start.stepForm,
+export default connect(({ double_random_cooperation }: { double_random_cooperation: StateType }) => ({
+  industryTypes: double_random_cooperation.industryTypes,
+  supervisionAdministrations: double_random_cooperation.supervisionAdministrations,
+  stepForm: double_random_cooperation.stepForm,
 }))(Step2);

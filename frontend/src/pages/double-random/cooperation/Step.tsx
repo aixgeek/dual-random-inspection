@@ -55,6 +55,6 @@ const StepForm: React.FC<StepFormProps> = ({ current }) => {
   );
 };
 
-export default connect(({ double_random_start }: { double_random_start: StateType }) => ({
-  current: double_random_start.current,
+export default connect(({ double_random_cooperation }: { double_random_cooperation: StateType }) => ({
+  current: double_random_cooperation.current,
 }))(StepForm);

@@ -78,14 +78,14 @@ const Step3: React.FC<StepProps> = (props) => {
     if (dispatch) {
       const values = getFieldsValue();
       dispatch({
-        type: 'double_random_start/saveStepFormData',
+        type: 'double_random_cooperation/saveStepFormData',
         payload: {
           ...stepForm,
           ...values,
         },
       });
       dispatch({
-        type: 'double_random_start/saveCurrentStep',
+        type: 'double_random_cooperation/saveCurrentStep',
         payload: 1,
       });
     }
@@ -95,11 +95,11 @@ const Step3: React.FC<StepProps> = (props) => {
     const values = await validateFields();
     if (dispatch) {
       dispatch({
-        type: 'double_random_start/saveStepFormData',
+        type: 'double_random_cooperation/saveStepFormData',
         payload: values,
       });
       dispatch({
-        type: 'double_random_start/saveCurrentStep',
+        type: 'double_random_cooperation/saveCurrentStep',
         payload: 3,
       });
     }
@@ -117,7 +117,7 @@ const Step3: React.FC<StepProps> = (props) => {
   useEffect(() => {
     if (dispatch) {
       dispatch({
-        type: 'double_random_start/fetchDutyDepartments',
+        type: 'double_random_cooperation/fetchDutyDepartments',
       });
     }
   }, []);
@@ -214,7 +214,7 @@ const Step3: React.FC<StepProps> = (props) => {
   );
 };
 
-export default connect(({ double_random_start }: { double_random_start: StateType }) => ({
-  dutyDepartments: double_random_start.dutyDepartments,
-  stepForm: double_random_start.stepForm,
+export default connect(({ double_random_cooperation }: { double_random_cooperation: StateType }) => ({
+  dutyDepartments: double_random_cooperation.dutyDepartments,
+  stepForm: double_random_cooperation.stepForm,
 }))(Step3);

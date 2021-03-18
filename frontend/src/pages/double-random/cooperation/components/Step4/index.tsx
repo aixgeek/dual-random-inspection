@@ -91,7 +91,7 @@ const Step4: React.FC<StepProps> = (props) => {
   const onStartNewStepForm = async () => {
     if (dispatch) {
       dispatch({
-        type: 'double_random_start/startNewStepForm',
+        type: 'double_random_cooperation/startNewStepForm',
       });
     }
   };
@@ -100,7 +100,7 @@ const Step4: React.FC<StepProps> = (props) => {
   if (!success) {
     if (dispatch) {
       dispatch({
-        type: 'double_random_start/submitStepForm',
+        type: 'double_random_cooperation/submitStepForm',
         payload: {
           ...stepForm,
         },
@@ -151,8 +151,8 @@ const Step4: React.FC<StepProps> = (props) => {
   );
 };
 
-export default connect(({ double_random_start }: { double_random_start: StateType }) => ({
-  result: double_random_start.result,
-  stepForm: double_random_start.stepForm,
-  success: double_random_start.success,
+export default connect(({ double_random_cooperation }: { double_random_cooperation: StateType }) => ({
+  result: double_random_cooperation.result,
+  stepForm: double_random_cooperation.stepForm,
+  success: double_random_cooperation.success,
 }))(Step4);
