@@ -12,8 +12,8 @@ export const isAntDesignPro = (): boolean => {
 
 // 给官方演示站点用，用于关闭真实开发环境不需要使用的特性
 export const isAntDesignProOrDev = (): boolean => {
-  const { NODE_REACT_ENV } = process.env;
-  if (NODE_REACT_ENV === 'dev') {
+  const { NODE_ENV } = process.env;
+  if (NODE_ENV === 'development') {
     return true;
   }
   return isAntDesignPro();

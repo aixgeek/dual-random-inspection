@@ -5,12 +5,18 @@
  * @LastEditTime: 2020-10-25 16:06:32
  * @FilePath: \VSCProjects\wanning-frontend\src\pages\system\service.ts
  */
-import { tcbRequest } from '@/utils';
+import { request } from 'umi';
 
-export async function querySupervisionAdministration() {
-  return tcbRequest('/supervisionAdministration');
+export async function querySupervisionAdministration(options?: { [key: string]: any }) {
+  return request<Record<string, any>>('/api/supervisionAdministration', {
+    method: 'GET',
+    ...(options || {}),
+  });
 }
 
-export async function queryIndustryType() {
-  return tcbRequest('/industryType');
+export async function queryIndustryType(options?: { [key: string]: any }) {
+  return request<Record<string, any>>('/api/industryType', {
+    method: 'GET',
+    ...(options || {}),
+  });
 }

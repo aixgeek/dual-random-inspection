@@ -3,7 +3,6 @@
  * @Date: 2020-09-17 13:57:15
  * @LastEditors: June Lue
  * @LastEditTime: 2020-10-25 15:46:50
- * @FilePath: \VSCProjects\wanning-frontend\src\pages\system\data.d.ts
  */
 export interface SupervisionAdministrationListItem {
   _id: string;

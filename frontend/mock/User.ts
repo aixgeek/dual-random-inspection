@@ -1,6 +1,15 @@
 import { Request, Response } from 'express';
 
-function getFakeCaptcha(req: Request, res: Response) {
+const waitTime = (time: number = 100) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(true);
+    }, time);
+  });
+};
+
+async function getFakeCaptcha(req: Request, res: Response) {
+  await waitTime(2000);
   return res.json('captcha-xxx');
 }
 
@@ -33,7 +42,7 @@ export default {
       return;
     }
     res.send({
-      name: '万宁市市场监督管理局',
+      name: 'Serati Ma',
       avatar: 'https://gw.alipayobjects.com/zos/antfincdn/XAosXuNZyF/BiazfanxmamNRoxxVxka.png',
       userid: '00000001',
       email: 'antdesign@alipay.com',
@@ -105,8 +114,9 @@ export default {
       address: 'Sidney No. 1 Lake Park',
     },
   ],
-  'POST /api/login/account': (req: Request, res: Response) => {
+  'POST /api/login/account': async (req: Request, res: Response) => {
     const { password, username, type } = req.body;
+    await waitTime(2000);
     if (password === 'ant.design' && username === 'admin') {
       res.send({
         status: 'ok',
@@ -131,6 +141,7 @@ export default {
         type,
         currentAuthority: 'admin',
       });
+      access = 'admin';
       return;
     }
 
@@ -141,7 +152,7 @@ export default {
     });
     access = 'guest';
   },
-  'GET /api/login/outLogin': (req: Request, res: Response) => {
+  'POST /api/login/outLogin': (req: Request, res: Response) => {
     access = '';
     res.send({ data: {}, success: true });
   },

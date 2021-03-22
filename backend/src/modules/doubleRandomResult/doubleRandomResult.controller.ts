@@ -33,6 +33,7 @@ export class DoubleRandomResultController {
 
         let { data, requestId } = await this.cloudbaseService
             .collection(CollectionV2.DoubleRandomResults)
+            .orderBy('createdAt', 'desc')
             .skip(Number(current - 1) * Number(pageSize))
             .limit(Number(pageSize))
             .get()

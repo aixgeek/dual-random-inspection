@@ -5,23 +5,57 @@
  * @LastEditTime: 2020-10-25 00:27:26
  * @FilePath: \VSCProjects\wanning-frontend\src\pages\data-entry\service.ts
  */
-import { tcbRequest } from '@/utils';
-import { ListParams } from './data';
+import { request } from 'umi';
 
-export async function queryIMList(params?: ListParams) {
-  return tcbRequest('/inspectionMatter', {
-    params,
+export async function queryIMList(
+  params: {
+    // query
+    /** 当前的页码 */
+    current?: number;
+    /** 页面的容量 */
+    pageSize?: number;
+  },
+  options?: { [key: string]: any }) {
+  return request<Record<string, any>>('/api/inspectionMatter', {
+    method: 'GET',
+    params: {
+      ...params,
+    },
+    ...(options || {}),
   });
 }
 
-export async function queryMPList(params?: ListParams) {
-  return tcbRequest('/marketParticipant', {
-    params,
+export async function queryMPList(
+  params: {
+    // query
+    /** 当前的页码 */
+    current?: number;
+    /** 页面的容量 */
+    pageSize?: number;
+  },
+  options?: { [key: string]: any }) {
+  return request<Record<string, any>>('/api/marketParticipant', {
+    method: 'GET',
+    params: {
+      ...params,
+    },
+    ...(options || {}),
   });
 }
 
-export async function queryLEOList(params?: ListParams) {
-  return tcbRequest('/lawEnforcementOfficial', {
-    params,
+export async function queryLEOList(
+  params: {
+    // query
+    /** 当前的页码 */
+    current?: number;
+    /** 页面的容量 */
+    pageSize?: number;
+  }, options?: { [key: string]: any }) {
+  return request<Record<string, any>>('/api/lawEnforcementOfficial', {
+    method: 'GET',
+    params: {
+      ...params,
+    },
+    ...(options || {}),
   });
 }

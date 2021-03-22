@@ -1,22 +1,22 @@
 import React, { useCallback } from 'react';
 import { LogoutOutlined, SettingOutlined, UserOutlined } from '@ant-design/icons';
-import { Menu, Spin } from 'antd';
+import { Avatar, Menu, Spin } from 'antd';
 import { history, useModel } from 'umi';
-import { logout } from '@/utils';
 import { stringify } from 'querystring';
 import HeaderDropdown from '../HeaderDropdown';
 import styles from './index.less';
+import { outLogin } from '@/services/ant-design-pro/api';
 
-export interface GlobalHeaderRightProps {
+export type GlobalHeaderRightProps = {
   menu?: boolean;
-}
+};
 
 /**
  * 退出登录，并且将当前的 url 保存
  */
 const loginOut = async () => {
-  await logout();
-  const { query, pathname } = history.location;
+  await outLogin();
+  const { query = {}, pathname } = history.location;
   const { redirect } = query;
   // Note: There may be security issues, please note
   if (window.location.pathname !== '/user/login' && !redirect) {
@@ -47,7 +47,7 @@ const AvatarDropdown: React.FC<GlobalHeaderRightProps> = ({ menu }) => {
       }
       history.push(`/account/${key}`);
     },
-    [],
+    [initialState, setInitialState],
   );
 
   const loading = (
@@ -97,6 +97,7 @@ const AvatarDropdown: React.FC<GlobalHeaderRightProps> = ({ menu }) => {
   return (
     <HeaderDropdown overlay={menuHeaderDropdown}>
       <span className={`${styles.action} ${styles.account}`}>
+        <Avatar size="small" className={styles.avatar} src={currentUser.avatar} alt="avatar" />
         <span className={`${styles.name} anticon`}>{currentUser.name}</span>
       </span>
     </HeaderDropdown>

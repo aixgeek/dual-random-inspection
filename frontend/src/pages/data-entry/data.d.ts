@@ -3,7 +3,6 @@
  * @Date: 2020-10-24 19:47:31
  * @LastEditors: June Lue
  * @LastEditTime: 2020-10-25 00:11:39
- * @FilePath: \VSCProjects\wanning-frontend\src\pages\data-entry\data.d.ts
  */
 export interface IMListItem {
   _id: string;
@@ -43,11 +42,4 @@ export interface MPListItem {
   dutyDepartment: string;
   flag: string;
   desc: string;
-}
-
-export interface ListParams {
-  pageSize?: number;
-  currentPage?: number;
-  filter?: { [key: string]: any[] };
-  sorter?: { [key: string]: any };
 }

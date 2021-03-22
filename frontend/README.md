@@ -1,15 +1,8 @@
-<!--
- * @Author: June Lue
- * @Date: 2020-09-17 13:57:15
- * @LastEditors: June Lue
- * @LastEditTime: 2020-09-17 14:05:25
- * @FilePath: \wanning\README.md
--->
-# 万宁市双随机一公开抽查系统
+# Ant Design Pro
 
-万宁市双随机一公开抽查系统是万宁市政府创新市场监管模式的实践项目，本系统使用单位包括万宁市综合执法局、万宁市农业农村局、万宁市教育局等20个单位部门。
+This project is initialized with [Ant Design Pro](https://pro.ant.design). Follow is the quick guide for how to use.
 
-## 准备环境
+## Environment Prepare
 
 Install `node_modules`:
 
@@ -23,19 +16,25 @@ or
 yarn
 ```
 
-### 启动项目
+## Provided Scripts
+
+Ant Design Pro provides some useful script to help you quick start and build with web project, code style check and test.
+
+Scripts provided in `package.json`. It's safe to modify or add additional script:
+
+### Start project
 
 ```bash
 npm start
 ```
 
-### 构建项目
+### Build project
 
 ```bash
 npm run build
 ```
 
-### 检查代码格式
+### Check code style
 
 ```bash
 npm run lint
@@ -47,8 +46,12 @@ You can also use script to auto fix some lint error:
 npm run lint:fix
 ```
 
-### 测试代码
+### Test code
 
 ```bash
 npm test
 ```
+
+## More
+
+You can view full document on our [official website](https://pro.ant.design). And welcome any feedback in our [github](https://github.com/ant-design/ant-design-pro).

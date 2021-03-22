@@ -1,10 +1,3 @@
-/*
- * @Author: June Lue
- * @Date: 2020-09-17 13:57:15
- * @LastEditors: June Lue
- * @LastEditTime: 2020-09-21 17:32:46
- * @FilePath: \wanning\src\locales\zh-CN\menu.ts
- */
 export default {
   'menu.welcome': '欢迎',
   'menu.more-blocks': '更多区块',
@@ -56,17 +49,4 @@ export default {
   'menu.editor.flow': '流程编辑器',
   'menu.editor.mind': '脑图编辑器',
   'menu.editor.koni': '拓扑编辑器',
-  'menu.double-random': '双随机业务',
-  'menu.double-random.start': '一般抽查',
-  'menu.double-random.cooperation': '联合抽查',
-  'menu.double-random.open': '双随机公示平台',
-  'menu.double-random.history': '双随机业务历史记录',
-  'menu.double-random.history.result': '双随机结果',
-  'menu.system': '系统管理',
-  'menu.system.supervision-administration': '执法主体管理',
-  'menu.system.industry-type': '监管行业管理',
-  'menu.data-entry': '资料录入',
-  'menu.data-entry.market-participant': '市场主体名录',
-  'menu.data-entry.law-enforcement-official': '检查人员名单',
-  'menu.data-entry.inspected-matter': '随机抽查事项清单',
 };

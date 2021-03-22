@@ -60,6 +60,26 @@ export class MarketParticipantController {
         }
     }
 
+    @Get('find')
+    async findMarketParticipant(
+        @Query() query: { info: string },
+        @Request() req: AuthRequest) {
+        const { info } = query
+
+        const filter = { 'name': info }
+
+        let { data, requestId } = await this.cloudbaseService
+            .collection(CollectionV2.MarketParticipants)
+            .where(filter)
+            .get()
+
+        return {
+            requestId,
+            data: data.shift(),
+            success: true,
+        }
+    }
+
     @Post()
     async updateMarketParticipants(
         @Body() body: MarketParticipant,

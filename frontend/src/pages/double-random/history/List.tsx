@@ -6,7 +6,7 @@ import ProTable, { ProColumns, ActionType } from '@ant-design/pro-table';
 import ProDescriptions from '@ant-design/pro-descriptions';
 import { ListItem } from './data';
 import { queryList, exportList } from './service';
-import { downloadFile } from '@/utils'
+// import { downloadFile } from '@/utils'
 
 /**
  *  导出节点

@@ -38,6 +38,7 @@ const IndustryTypeList: React.FC<{}> = () => {
         search={false}
         actionRef={actionRef}
         rowKey="key"
+        // TODO
         options={false}
         request={() => queryIndustryType()}
         columns={columns}

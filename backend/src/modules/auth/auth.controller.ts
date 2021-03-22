@@ -12,10 +12,11 @@ class LoginDTO {
 
 @Controller('')
 export class AuthController {
+
   @Get('currentUser')
   async getCurrentUser(@Request() req: AuthRequest) {
-    const { authUser } = req
 
+    const { authUser } = req
     return authUser
   }
 

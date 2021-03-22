@@ -1,10 +1,3 @@
-/*
- * @Author: June Lue
- * @Date: 2020-09-17 13:57:15
- * @LastEditors: June Lue
- * @LastEditTime: 2020-09-25 15:10:57
- * @FilePath: \wanning\config\proxy.ts
- */
 /**
  * 在生产环境 代理是无法生效的，所以这里没有生产环境的配置
  * The agent cannot take effect in the production environment
@@ -14,22 +7,22 @@
  */
 export default {
   dev: {
-    '/api': {
-      target: 'http://localhost:5000',
+    '/api/': {
+      target: 'http://127.0.0.1:5000',
       changeOrigin: true,
       pathRewrite: { '^': '' },
     },
   },
   test: {
-    '/api': {
-      target: '',
+    '/api/': {
+      target: 'https://preview.pro.ant.design',
       changeOrigin: true,
       pathRewrite: { '^': '' },
     },
   },
   pre: {
-    '/api': {
-      target: '',
+    '/api/': {
+      target: 'your pre url',
       changeOrigin: true,
       pathRewrite: { '^': '' },
     },
