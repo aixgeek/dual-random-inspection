@@ -5,7 +5,7 @@ import type { RequestConfig, RunTimeLayoutConfig } from 'umi';
 import { history, Link } from 'umi';
 import RightContent from '@/components/RightContent';
 import Footer from '@/components/Footer';
-import type { ResponseError } from 'umi-request';
+import type { RequestOptionsInit, ResponseError } from 'umi-request';
 import { currentUser as queryCurrentUser } from './services/ant-design-pro/api';
 import { BookOutlined, LinkOutlined } from '@ant-design/icons';
 
@@ -31,12 +31,12 @@ export async function getInitialState(): Promise<{
       const currentUser = await queryCurrentUser();
       return currentUser;
     } catch (error) {
-      // history.push(loginPath);
+      history.push(loginPath);
     }
     return undefined;
   };
   // 如果是登录页面，不执行
-  if (history.location.pathname !== loginPath) {
+  if (history.location.pathname !== loginPath && location.pathname !== openPath) {
     const currentUser = await fetchUserInfo();
     return {
       fetchUserInfo,
@@ -56,7 +56,7 @@ export const layout: RunTimeLayoutConfig = ({ initialState }) => {
     rightContentRender: () => <RightContent />,
     disableContentMargin: false,
     waterMarkProps: {
-      content: initialState?.currentUser?.name,
+      // content: initialState?.currentUser?.name,
     },
     footerRender: () => <Footer />,
     onPageChange: () => {
@@ -128,7 +128,27 @@ const errorHandler = (error: ResponseError) => {
   throw error;
 };
 
+// 认证拦截器
+const authHeaderInterceptor = (url: string, options: RequestOptionsInit) => {
+  const token = sessionStorage.getItem('token')
+  const authHeader = { Authorization: `Bearer ${token}` };
+  return {
+    url: `${url}`,
+    options: { ...options, interceptors: true, headers: authHeader },
+  };
+};
+
+// 响应处理
+const authResponseInterceptor = (response: Response) => {
+  if (response.status === 401 && location.pathname !== loginPath && location.pathname !== openPath) {
+    history.push(loginPath);
+  }
+  return response
+}
+
 // https://umijs.org/zh-CN/plugins/plugin-request
 export const request: RequestConfig = {
   errorHandler,
+  requestInterceptors: [authHeaderInterceptor],
+  responseInterceptors: [authResponseInterceptor]
 };
