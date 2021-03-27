@@ -39,7 +39,7 @@ const Index: React.FC<{}> = () => {
           </Button>,
         ]}
         options={false}
-        request={() => queryAllDutyDepartment('mine')}
+        request={() => queryAllDutyDepartment('normal')}
         columns={columns}
         pagination={false}
         rowSelection={false}

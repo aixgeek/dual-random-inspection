@@ -1,0 +1,8 @@
+{
+  "name": "dual-random-inspection",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}

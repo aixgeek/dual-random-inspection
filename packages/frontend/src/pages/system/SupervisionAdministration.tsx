@@ -36,7 +36,7 @@ const Index: React.FC<{}> = () => {
         actionRef={actionRef}
         rowKey="_id"
         options={false}
-        request={() => queryAllSupervisionAdministration('mine')}
+        request={() => queryAllSupervisionAdministration('normal')}
         columns={columns}
         pagination={false}
         rowSelection={false}
