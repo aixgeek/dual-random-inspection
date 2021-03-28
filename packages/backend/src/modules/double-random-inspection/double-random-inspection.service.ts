@@ -16,9 +16,13 @@ export class DoubleRandomInspectionService {
     // 开启双随机业务数据库事务
     const transaction = await this.cloudbaseService.db.startTransaction();
     // 插入双随机业务数据，并得到双随机业务ID
+    const doubleRandomInspection = {
+      ...createDoubleRandomInspectionDto,
+      supervisionAdministrations: createDoubleRandomInspectionDto.supervisionAdministrations.map(sa => sa.name),
+    }
     const { id } = await transaction
       .collection(Collection.DoubleRandomInspectionsV2)
-      .add(createDoubleRandomInspectionDto);
+      .add(doubleRandomInspection);
     // 组装双随机结果列表数据
     const {
       createdAt,
@@ -72,7 +76,7 @@ export class DoubleRandomInspectionService {
     if (!supervisionAdministrations?.some((_) => _ === '*')) {
       filter = {
         ...filter,
-        'supervisionAdministrations.name': $.in(supervisionAdministrations),
+        'supervisionAdministrations': $.in(supervisionAdministrations),
       };
     }
 

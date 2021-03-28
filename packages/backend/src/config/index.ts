@@ -1,6 +1,6 @@
 export default {
   // API 端口
-  globalPrefix: '/api',
+  globalPrefix: process.env.NODE_ENV === 'development' ? '/api' : '',
 
   // 请求处理超时时间
   timeout: 15000,

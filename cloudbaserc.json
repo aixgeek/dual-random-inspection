@@ -1,0 +1,41 @@
+{
+  "version": "2.0",
+  "envId": "{{env.ENVID}}",
+  "$schema": "https://framework-1258016615.tcloudbaseapp.com/schema/latest.json",
+  "framework": {
+    "name": "dual-random-inspection",
+    "hooks": {},
+    "plugins": {
+      "frontend": {
+        "use": "@cloudbase/framework-plugin-website",
+        "inputs": {
+          "outputPath": "./packages/frontend/dist",
+          "installCommand": "echo \"Skip Install\"",
+          "buildCommand": "echo \"Skip Build\"",
+          "cloudPath": "{{env.deployPath}}"
+        }
+      },
+      "backend": {
+        "use": "@cloudbase/framework-plugin-function",
+        "inputs": {
+          "functionRootPath": "./packages/backend",
+          "functions": [
+            {
+              "name": "backend",
+              "timeout": 15,
+              "memory": 256,
+              "handler": "index.main",
+              "functionDistPath": "./",
+              "envVariables": {
+                "NODE_ENV": "production"
+              }
+            }
+          ],
+          "servicePaths": {
+            "backend": "/api"
+          }
+        }
+      }
+    }
+  }
+}

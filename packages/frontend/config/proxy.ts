@@ -15,14 +15,14 @@ export default {
   },
   test: {
     '/api/': {
-      target: 'https://wanning-open-0gbztc9h2bcb19f0-1300942068.ap-shanghai.service.tcloudbase.com/backend',
+      target: 'https://wanning.hainan-ftz.com/api',
       changeOrigin: true,
       pathRewrite: { '^': '' },
     },
   },
   pre: {
     '/api/': {
-      target: 'https://wanning-open-0gbztc9h2bcb19f0-1300942068.ap-shanghai.service.tcloudbase.com/backend',
+      target: 'https://wanning-open-0gbztc9h2bcb19f0-1300942068.ap-shanghai.service.tcloudbase.com/api',
       changeOrigin: true,
       pathRewrite: { '^': '' },
     },

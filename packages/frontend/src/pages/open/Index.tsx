@@ -148,6 +148,7 @@ export default (): React.ReactNode => {
                   columns={columns}
                   rowSelection={false}
                   pagination={{ position: ['bottomCenter'], pageSize: 10 }}
+                  scroll={{ x: 1440 }}
                 />)
             }
           </Col>
