@@ -38,6 +38,7 @@ export class MarketParticipantService {
     const $ = this.cloudbaseService.db.command;
     filter.supervisionAdministration = $.in(supervisionAdministrations);
     filter.industryTypes = $.in(industryTypes);
+    filter.flag = $.neq(0)
 
     const { data } = await this.cloudbaseService.db
       .collection(Collection.MarketParticipantsV2)
@@ -45,6 +46,7 @@ export class MarketParticipantService {
       .match({
         supervisionAdministration: filter.supervisionAdministration,
         industryTypes: filter.industryTypes,
+        flag: filter.flag,
       })
       .sample({
         size: total,
